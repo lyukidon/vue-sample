@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HeaderIndex from './pages/header/HeaderIndex.vue';
+import HeaderIndex from './components/header/HeaderIndex.vue';
 
 export default {
   name: 'App',

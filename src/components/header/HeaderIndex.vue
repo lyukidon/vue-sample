@@ -3,14 +3,12 @@
 </template>
 
 <script>
-import HeaderTop from '../../components/HeaderTop.vue'
+import HeaderTop from '../header/HeaderTop.vue'
 export default 
   {
   components: { HeaderTop },
     setup () {
 
-    HeaderTop
-        return {}
     }
 }
 </script>
