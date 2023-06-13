@@ -10,9 +10,13 @@ export default new Vuex.Store({
     getters:{},
     mutations: {
         setToggle: (state, e) => {
-            console.log(state.toggle)
-            const {name} = e.target;
-            state.toggle[name] = !state.toggle[name]
+            console.log(e.target.id)
+            const {name, id} = e.target;
+            if (name){
+                state.toggle[name] = !state.toggle[name]
+            }else{
+                state.toggle[id] = !state.toggle[id]
+            }
         }
     },
     actions: {},

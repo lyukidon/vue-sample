@@ -1,27 +1,24 @@
 <template>
     <transition name="slide-fade">
         <div class="container">
-            <div class="categoryMenu">
-                <div class="buttonContainer">
-                    <button name="menu" v-on:click="setToggle">
+            <div class="userMenu">
+                <div>
+                    <button name="user" v-on:click="setToggle">
                         <v-icon name="bi-x-lg" scale="1.5"></v-icon>
                     </button>
                 </div>
-                <div v-for="i in category" :key="i">
-                    <div class="categoryName">{{ i }}</div>
-                    <div class="categoryUrl" v-for="j in categoryUrl" :key="j.title">
-                        <a v-bind:href="j.url" v-if="j.category === i">{{ j.title }}</a>
-                    </div>
-                </div>
+                <div>Username</div>
+                <div>Icon</div>
+                <div>Nickname</div>
+                <div>Logout</div>
+                <div>Edit Profile</div>
             </div>
-            <div class="space" id="menu" v-on:click="setToggle"></div>
+            <div class="space"></div>
         </div>
     </transition>
 </template>
 
 <script>
-import { category } from "../../assets/category";
-import { categoryUrl } from "../../assets/categoryUrl";
 import { mapMutations } from "vuex";
 import { OhVueIcon } from "oh-vue-icons";
 
@@ -35,10 +32,7 @@ export default {
         }),
     },
     setup() {
-        return {
-            category,
-            categoryUrl,
-        };
+        return {};
     },
 };
 </script>
@@ -46,27 +40,18 @@ export default {
 <style lang="scss" scoped>
 .container {
     display: flex;
+    flex-direction: row-reverse;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
 }
-.categoryMenu {
+.userMenu {
     width: 270px;
     height: calc(100vh - 100px);
     border: 1px solid black;
     padding: 50px;
     background-color: rgba(255, 255, 255, 1);
     overflow-y: auto;
-}
-.categoryName {
-    margin: 15px 0px;
-}
-.categoryUrl {
-    font-size: 13px;
-    margin: 5px 0px;
-}
-a {
-    color: rgb(96, 96, 96);
 }
 .space {
     width: calc(100vw - 372px);
@@ -83,7 +68,7 @@ a {
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-    transform: translateX(-20px);
+    transform: translateX(20px);
     opacity: 0;
 }
 </style>

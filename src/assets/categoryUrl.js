@@ -5,7 +5,7 @@ export const categoryUrl = [
         "url": "#"
     },
     {
-        "category": "가전",
+        "category": "전자기기",
         "title": "컴퓨터",
         "url": "#"
     },
@@ -32,6 +32,11 @@ export const categoryUrl = [
     {
         "category": "의류",
         "title": "신발",
+        "url": "#"
+    },
+    {
+        "category": "음향기기",
+        "title": "스피커",
         "url": "#"
     }
 ]

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <HeaderIndex></HeaderIndex>
+    <Main />
   </div>
 </template>
 
 <script>
-import HeaderIndex from './components/header/HeaderIndex.vue';
+import Main from './pages/Main.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderIndex,
+    Main
   }
 }
 </script>
